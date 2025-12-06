@@ -1,0 +1,9 @@
+### GET-Health
+GET http://localhost:8080/actuator/health
+
+### GET h2-console
+GET http://localhost:8080/h2-console
+
+### GET-Endpoint
+GET http://localhost:8080/api/v1/pokemon/charizard
+
