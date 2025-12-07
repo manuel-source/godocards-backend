@@ -1,0 +1,21 @@
+name: maven run build and test
+run-name: mvn:build:test
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  maven-run-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: mvn build without Tests
+        run:
+          mvn package -B -DskipTests
+
+      - name: mvn build with Tests
+        run:
+          mvn package -B
